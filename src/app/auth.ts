@@ -1,12 +1,15 @@
 import { AuthOptions, getServerSession } from "next-auth";
 
 import CredentialsProvider from "next-auth/providers/credentials";
+// import ADProvider from "next-auth/providers/azure-ad";
 
 declare module "next-auth" {
-  interface User {
+  interface AuthorizeOutput {
     id: number;
-    name: string;
+    email: string;
   }
+
+  interface User extends AuthorizeOutput {}
 }
 
 const authOptions: AuthOptions = {
@@ -14,13 +17,13 @@ const authOptions: AuthOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        username: { label: "Username", type: "text" },
+        email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         console.log(credentials);
 
-        const user = { id: 1, name: "Test User" };
+        const user = { id: "1", email: "gabriel@gmail.com" };
 
         return user;
       },

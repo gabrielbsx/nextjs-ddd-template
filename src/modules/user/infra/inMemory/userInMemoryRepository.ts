@@ -1,7 +1,7 @@
 import InMemoryRepository from "@/shared/infra/inMemory/inMemoryRepository";
-import UserRepository from "../../domain/repository/userRepository";
-import UserEntity from "../../domain/entity/userEntity";
-import Email from "../../domain/valueObjects/email";
+import UserRepository from "@/modules/user/domain/repository/userRepository";
+import UserEntity from "@/modules/user/domain/entity/userEntity";
+import Email from "@/modules/user/domain/valueObjects/email";
 
 export default class UserInMemoryRepository
   extends InMemoryRepository<UserEntity>

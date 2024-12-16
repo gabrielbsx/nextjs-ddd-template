@@ -1,8 +1,8 @@
 import AxiosRepository from "@/shared/infra/axios/axiosRepository";
-import UserEntity from "../../domain/entity/userEntity";
-import UserRepository from "../../domain/repository/userRepository";
-import Email from "../../domain/valueObjects/email";
-import { api } from "@/shared/infra/axios/axiosConfig";
+import UserEntity from "@/modules/user/domain/entity/userEntity";
+import UserRepository from "@/modules/user/domain/repository/userRepository";
+import Email from "@/modules/user/domain/valueObjects/email";
+import api from "@/shared/infra/axios/axiosConfig";
 
 export default class UserAxiosRepository
   extends AxiosRepository<UserEntity>

@@ -3,4 +3,5 @@ export default interface CreateUserInput {
   username: string;
   email: string;
   password: string;
+  passwordConfirmation: string;
 }
