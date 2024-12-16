@@ -1,4 +1,4 @@
-import Id from "@/modules/user/domain/valueObjects/id";
+import Id from "../domain/valueObjects/id";
 
 export default interface Repository<TEntity> {
   save(entity: TEntity): Promise<void>;

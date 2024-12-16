@@ -1,9 +1,8 @@
+import { Entity } from "@/shared/domain/entity/entity";
 import Email from "../valueObjects/email";
-import Id from "../valueObjects/id";
 import Password from "../valueObjects/password";
 
-type UserProps = {
-  id?: Id;
+type UserProps = Entity & {
   name: string;
   email: Email;
   username: string;
@@ -27,5 +26,9 @@ export default class UserEntity {
 
   get email() {
     return this._props.email;
+  }
+
+  get username() {
+    return this._props.username;
   }
 }

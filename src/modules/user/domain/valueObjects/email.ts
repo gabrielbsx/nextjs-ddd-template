@@ -14,4 +14,8 @@ export default class Email {
 
     return emailRegex.test(email);
   }
+
+  public equals(email: Email) {
+    return this.email === email.value;
+  }
 }

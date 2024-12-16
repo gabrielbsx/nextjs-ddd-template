@@ -6,7 +6,7 @@ import Password from "../domain/valueObjects/password";
 import CreateUserInput from "./dto/createUserInput";
 import UserAlreadyExistsError from "../domain/error/userAlreadyExistsError";
 
-export default class CreateUserService
+export default class CreateUserAppService
   implements AppService<CreateUserInput, boolean>
 {
   constructor(private readonly _userDomainService: UserDomainService) {}

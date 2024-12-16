@@ -1,3 +1,7 @@
+"use client";
+
+import { CreateUserPageFactory } from "@/modules/user/bootstrap/signInPageFactory";
+
 export default function SignInPage() {
-  return <>Sign in page</>;
+  return <CreateUserPageFactory />;
 }
